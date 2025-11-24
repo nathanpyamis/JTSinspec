@@ -31,14 +31,17 @@
   color: var(--muted); /* orange accent */
 }
 [data-theme="dark"] span.small.text,
-[data-theme="dark"] p.text-muted,
 [data-theme="dark"] div.small.text-muted,
 [data-theme="dark"] span.d-none,
-[data-theme="dark"] a.nav-link {
+[data-theme="dark"] a.nav-link
+              {
 
   color: #add8e6 !important; /* light blue */
 }
-
+[data-theme="dark"] ul.list-check.list-unstyled,
+[data-theme="dark"] p.text.small.text-muted{
+  color: #000000d9 !important;
+}
 /* Example: put this near the end of your stylesheet */
 [data-theme="dark"] .navbar-toggler {
   border-color: #fff;
@@ -110,6 +113,17 @@ body {
   color: var(--ink);
   background: var(--bg);
 }
+.btn-outline-dark {
+  border: 1px solid #333;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-outline-dark:hover {
+  background-color: #333;
+  color: #fff;
+}
+
 
 /* Hero section */
 .hero {
@@ -155,7 +169,7 @@ body {
   font-size: clamp(1.25rem, 3vw, 2rem);
 }
 .section-sub {
-  color: #f8f9fa;
+  color: #0e0f0f;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
@@ -211,9 +225,11 @@ body {
   color: #fff; /* makes all text inside white */
 }
 .text-muted.small {
-  color: #fff !important;
+  color: #fff;
 }
-
+.first-muted {
+  color: #ff6600 !important; /* orange */
+}
 
 /* Footer */
 .footer {
@@ -240,3 +256,109 @@ body {
 /* Smooth anchor scroll */
 html { scroll-behavior: smooth; }
 
+/* Complance Section */
+#compliance {
+  position: relative;
+  background: url("../images/compliance-bg.webp") center center / cover no-repeat;
+  color: #fff;
+}
+#compliance::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay for readability */
+}
+#compliance .container {
+  position: relative; /* ensures content sits above overlay */
+}
+#compliance .card {
+  background: rgba(255,255,255,0.9); /* semi-transparent card */
+}
+
+/* Services Section */
+#services {
+  background: linear-gradient(to right, #f9fafc, #ffffff);
+}
+#services .card {
+  border: none;
+  border-radius: 16px;
+  color: var(--ink);
+  background: 
+    radial-gradient(circle at top left, rgba(10, 86, 204, 0.15), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(255, 153, 51, 0.15), transparent 60%),
+    linear-gradient(135deg, #f9fafc, #ffffff);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+#services .icon-circle {
+  font-size: 1.4rem;
+  background: var(--bg-soft);
+  color: var(--brand);
+}
+#services h3.h6 {
+  font-family: 'Alegreya', serif;
+  color: orange; /* or a hex like #FF6600 for a stronger tone */
+  font-weight: 600;
+}
+#services p.small{
+  color: rgb(0 0 0 / 96%);
+} 
+
+/* Coverage */
+#coverage {
+  background-color: var(--brand); /* or a custom hex like #0a56cc */
+  color: #fff; /* ensures text is readable */
+}
+#coverage .card {
+  background: rgba(255,255,255,0.9); /* semi-transparent cards for contrast */
+}
+#coverage h3.h6 {
+  font-family: 'Alegreya', serif;
+  color: orange; /* or a hex like #FF6600 for a stronger tone */
+  font-weight: 700;
+}
+
+/* Industries */
+
+/* Section background */
+#industries {
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); /* soft gradient */
+  padding: 3rem 0;
+}
+
+/* H2 heading with Fredericka the Great */
+#industries .section-title {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #0a56cc; /* brand blue or your preferred color */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Card styling */
+#industries .card {
+  border: none;
+  border-radius: 16px;
+  background: 
+    radial-gradient(circle at top left, rgba(10, 86, 204, 0.15), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(255, 153, 51, 0.15), transparent 60%),
+    #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#industries .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Card headings */
+#industries h5 {
+  font-weight: 600;
+  color: #333;
+}
