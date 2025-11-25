@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | JTS Inspection Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Base + dark mode */
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    body.dark-mode {
+      background-color: #212529;
+      color: #f8f9fa;
+    }
+    body.dark-mode p,
+    body.dark-mode span,
+    body.dark-mode a,
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6 {
+      color: #ffffff !important;
+    }
+    body.dark-mode a:hover { color: #0d6efd; }
+
+    /* Gradient heading */
+    .gradient-heading,
+    .section-title {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    body.dark-mode .gradient-heading,
+    body.dark-mode .section-title {
+      background: linear-gradient(90deg, #ffffff, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Buttons */
+    .btn-accent {
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+    }
+    .btn-accent:hover { background: #0b5ed7; color: #fff; }
+
+    .btn-outline-muted {
+      color: #212529;
+      border: 1px solid #adb5bd;
+    }
+    .btn-outline-muted:hover {
+      background-color: #e9ecef;
+      color: #212529;
+    }
+    body.dark-mode .btn-outline-muted {
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+    body.dark-mode .btn-outline-muted:hover {
+      background-color: #ffffff;
+      color: #212529;
+    }
+
+    /* Cards + icons */
+    .card { border: 1px solid #dee2e6; border-radius: 10px; }
+    body.dark-mode .card { background-color: #2b2b2b; border-color: #444; }
+
+    .icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #0d6efd;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    body.dark-mode .icon-circle { background: #6610f2; }
+
+    .list-check li { margin-bottom: 0.5rem; }
+    .list-check i { color: #0d6efd; margin-right: 0.5rem; }
+    body.dark-mode .list-check i { color: #ffffff; }
+
+    /* Header spacing */
+    .page-header { padding: 3rem 0 1rem; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top bg-light">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 flex-wrap" href="index.html">
+      <img src="asset/images/logo.png" alt="JTS Logo" width="40" height="40" class="rounded-circle" />
+      <span class="brand-badge px-3 py-2 rounded-3 fw-bold">JTS Inspection Services</span>
+    </a>
+
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <button class="btn btn-sm btn-outline-muted theme-toggle" aria-label="Toggle dark mode">
+        <i class="bi bi-moon"></i><span class="ms-2">Dark</span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><strong>Home</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html"><strong>Services</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="industries.html"><strong>Industries</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="compliance.html"><strong>Compliance</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="vacancy.html"><strong>Vacancies</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header text-center">
+  <h1 class="gradient-heading">Our Services</h1>
+  <p class="section-sub">Certified inspection solutions with modern equipment and rigorous procedures, tailored to PNG conditions.</p>
+</header>
+
+<!-- Services Section -->
+<section id="services" class="section bg-light">
+  <div class="container">
+    <!-- Header -->
+    <div class="row mb-4 align-items-end">
+      <div class="col-lg-8">
+        <h2 class="section-title" data-en="Conventional and advanced NDT services" data-tp="Konvensenal na advans NDT ol servis">
+          Conventional and Advanced NDT Services
+        </h2>
+        <p class="section-sub" data-en="We deliver certified inspection solutions with modern equipment and rigorous procedures, tailored to PNG conditions." data-tp="Mipela i wok wantaim ol nupela ekwipmen na stretpela fasin, i stret long PNG kondisen.">
+          We deliver certified inspection solutions with modern equipment and rigorous procedures, tailored to PNG conditions.
+        </p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="#contact" class="btn btn-accent">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span data-en="Request a quote" data-tp="Askim prais">Request a Quote</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Conventional & Advanced -->
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="icon-circle"><i class="fa-solid fa-wrench"></i></div>
+            <h3 class="h6 m-0" data-en="Conventional NDT" data-tp="Konvensenal NDT">Conventional NDT</h3>
+          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>Ultrasonic Testing (UT)</li>
+            <li><i class="fa-solid fa-check"></i>Magnetic Particle Testing (MT)</li>
+            <li><i class="fa-solid fa-check"></i>Liquid Penetrant Testing (PT)</li>
+            <li><i class="fa-solid fa-check"></i>Radiographic Testing (RT)</li>
+            <li><i class="fa-solid fa-check"></i>Visual Inspection (VT)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="icon-circle"><i class="fa-solid fa-computer"></i></div>
+            <h3 class="h6 m-0" data-en="Advanced NDT" data-tp="Advans NDT">Advanced NDT</h3>
+          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>Phased Array Ultrasonic Testing (PAUT)</li>
+            <li><i class="fa-solid fa-check"></i>Time of Flight Diffraction (TOFD)</li>
+            <li><i class="fa-solid fa-check"></i>Eddy Current Testing (ET)</li>
+            <li><i class="fa-solid fa-check"></i>Magnetic Flux Leakage (MFL)</li>
+            <li><i class="fa-solid fa-check"></i>Infrared Thermography (IR)</li>
+            <li><i class="fa-solid fa-check"></i>Acoustic Emission (AE)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asset Integrity, QA/QC, Mobilization -->
+    <div class="row gy-4 mt-1">
+      <div class="col-lg-4">
+        <div class="card h-100 p-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="icon-circle"><i class="fa-solid fa-industry"></i></div>
+            <h3 class="h6 m-0">Asset Integrity</h3>
+          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>Pipeline integrity assessment</li>
+            <li><i class="fa-solid fa-check"></i>Pressure equipment inspection</li>
+            <li><i class="fa-solid fa-check"></i>Corrosion monitoring & RBI</li>
+            <li><i class="fa-solid fa-check"></i>Fitness-for-service screening</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card h-100 p-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="icon-circle"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h3 class="h6 m-0">QA/QC & Procedures</h3>
+          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>Project-specific ITP & method statements</li>
+            <li><i class="fa-solid fa-check"></i>Calibration & equipment control</li>
+            <li><i class="fa-solid fa-check"></i>Reporting with traceability</li>
+            <li><i class="fa-solid fa-check"></i>HSE compliance across worksites</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card h-100 p-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="icon-circle"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3 class="h6 m-0">Mobilization</h3>
+          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>Rapid deployment nationwide</li>
+            <li><i class="fa-solid fa-check"></i>Madang & Port Moresby hubs</li>
+            <li><i class="fa-solid fa-check"></i>Remote site readiness</li>
+            <li><i class="fa-solid fa-check"></i>Short- and long-term projects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-4">
+  <small>&copy; <span id="year"></span> JTS Inspection Services. All rights reserved.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Dark mode toggle
+  document.querySelector('.theme-toggle').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    const icon = this.querySelector('i');
+    const text = this.querySelector('span');
+    if (document.body.classList.contains('dark-mode')) {
+      icon.className = 'bi bi-brightness-high';
+      text.textContent = 'Light';
+    } else {
+      icon.className = 'bi bi-moon';
+      text.textContent = 'Dark';
+    }
+  });
+
+  // Auto year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
