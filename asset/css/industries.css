@@ -44,6 +44,16 @@ body {
   border-radius: 8px;
   margin: 1rem 0;
 }
+/* Darkmode */
+/* Dark mode overrides for specific spans */
+body.dark-mode .ms-2 {
+  color: #000000 !important; /* force black */
+}
+
+body.dark-mode .brand-badge.px-3.py-2.rounded-3.fw-bold {
+  color: #000000 !important; /* force black */
+}
+
 /* Breadcrum */
 .breadcrumb-nav {
   background: #f9fafc;
@@ -122,3 +132,27 @@ body {
 [data-theme="dark"] .section-sub {
   color: #bbb;
 }
+* Buttons */
+.btn-brand {
+  background: var(--brand);
+  border-color: transparent;
+  color: #fff;
+}
+.btn-brand:hover {
+  background: #0a56cc;
+  color: #fff;
+}
+.btn-accent {
+  background: var(--accent);
+  color: #07131f;
+  border: none;
+}
+.btn-outline-muted {
+  border: 1px solid var(--border);
+  color: var(--ink);
+  background: var(--bg);
+}
+  .sticky-top{
+background-color: rgb(247 247 247);
+position: sticky;
+  }

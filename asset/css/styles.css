@@ -39,8 +39,14 @@
   color: #add8e6 !important; /* light blue */
 }
 [data-theme="dark"] ul.list-check.list-unstyled,
-[data-theme="dark"] p.text.small.text-muted{
+[data-theme="dark"] p.small
+{
   color: #000000d9 !important;
+}
+[data-theme="dark"] p.section-sub,
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] p.text.small.text-muted{
+  color: #ffc107 !important; /* Light orange */
 }
 /* Example: put this near the end of your stylesheet */
 [data-theme="dark"] .navbar-toggler {
@@ -169,7 +175,7 @@ body {
   font-size: clamp(1.25rem, 3vw, 2rem);
 }
 .section-sub {
-  color: #0e0f0f;
+  color: #ff6600 !important
   font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
