@@ -4,7 +4,7 @@
       --ink: #0f172a;
       --muted: #556079;
       --bg: #ffffff;
-      --bg-soft: #f5f7fb;
+      --bg-soft: #fee600;
       --card: #ffffff;
       --border: #e5e7eb;
       --accent: #11b980;
@@ -64,7 +64,14 @@
 [data-theme="dark"] h3.h6.m-0 {
   color: #2f5a9e !important; /* Dark blue */
 }
-
+[data-theme="dark"] span.chip {
+  color: #000 !important; /* Black */
+}
+[data-theme="dark"] div.small-contact,
+[data-theme="dark"] i.fa-solid,
+[data-theme="dark"] h2.section-title.custom {
+  color: #0a58ca; /* Dark blue */
+}
 
 
 
@@ -272,7 +279,46 @@ body {
 .accreditation-icon:hover {
   transform: scale(1.1);       /* subtle zoom on hover */
 }
+.chip {
+  display: inline-block;
+  background-color: #f1f3f5;   /* light gray background */
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  white-space: nowrap;         /* keeps text together */
+}
 
+@media (min-width: 768px) {
+  .chip {
+    margin-right: 10px;        /* extra spacing on larger screens */
+  }
+}
+.contact-container {
+  background-color: #750108;   /* brand maroon */
+  border-radius: 10px;
+  padding: 2rem;
+  color: #fff;                 /* white text for contrast */
+}
+
+.contact-container .section-title,
+.contact-container .section-sub {
+  color: #fff;                 /* ensure headings stay visible */
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: #750108;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+label.form-label{
+  color: #fee600;
+}
 
 /* Footer */
 /* Base footer theme — Oishii-inspired */
