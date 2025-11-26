@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="asset/css/compliance.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     body {
@@ -85,6 +85,15 @@
     body.dark-mode .list-check i {
       color: #ffffff;
     }
+    .accreditation-icon {
+  max-height: 80px;   /* keeps icons consistent */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.accreditation-icon:hover {
+  transform: scale(1.1); /* subtle zoom on hover */
+}
+
   </style>
 </head>
 <body>
@@ -123,47 +132,97 @@
 
 <main>
   <!-- Compliance -->
-  <section id="compliance" class="section">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <div class="card p-4 h-100">
-            <div class="d-flex align-items-center gap-3 mb-2">
-              <div class="icon-circle"><i class="fa-solid fa-certificate"></i></div>
-              <h3 class="h6 m-0">Standards & Systems</h3>
-            </div>
-            <ul class="list-check list-unstyled">
-              <li><i class="fa-solid fa-check"></i>Documented NDT procedures & ITPs</li>
-              <li><i class="fa-solid fa-check"></i>Equipment calibration & traceability</li>
-              <li><i class="fa-solid fa-check"></i>HSE management and site induction</li>
-              <li><i class="fa-solid fa-check"></i>Quality management practices</li>
-            </ul>
-            <p class="small text-muted m-0">Evidence available upon request.</p>
+<section id="compliance" class="section">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <!-- Standards & Systems -->
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="icon-circle"><i class="fa-solid fa-certificate"></i></div>
+            <h3 class="h6 m-0">Standards & Systems</h3>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card p-4 h-100">
-            <div class="d-flex align-items-center gap-3 mb-2">
-              <div class="icon-circle"><i class="fa-solid fa-user-check"></i></div>
-              <h3 class="h6 m-0">Personnel</h3>
-            </div>
-            <ul class="list-check list-unstyled">
-              <li><i class="fa-solid fa-check"></i>Certified NDT technicians</li>
-              <li><i class="fa-solid fa-check"></i>Project QA/QC coordination</li>
-              <li><i class="fa-solid fa-check"></i>Client reporting & verification</li>
-            </ul>
-            <p class="small text-muted m-0">CVs and certifications can be shared for vendor onboarding.</p>
-          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>Documented NDT procedures & ITPs</li>
+            <li><i class="fa-solid fa-check"></i>Equipment calibration & traceability</li>
+            <li><i class="fa-solid fa-check"></i>HSE management and site induction</li>
+            <li><i class="fa-solid fa-check"></i>Quality management practices</li>
+          </ul>
+          <p class="small text-muted m-0">Evidence available upon request.</p>
         </div>
       </div>
+
+      <!-- Personnel -->
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="icon-circle"><i class="fa-solid fa-user-check"></i></div>
+            <h3 class="h6 m-0">Personel</h3>
+          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>Certified NDT technicians</li>
+            <li><i class="fa-solid fa-check"></i>Project QA/QC coordination</li>
+            <li><i class="fa-solid fa-check"></i>Client reporting & verification</li>
+          </ul>
+          <p class="small text-muted m-0">CVs and certifications can be shared for vendor onboarding.</p>
+        </div>
+      </div>
+
+      <!-- Quality Assurance -->
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="icon-circle"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="h6 m-0">Quality Assurance</h3>
+          </div>
+          <ul class="list-check list-unstyled">
+            <li><i class="fa-solid fa-check"></i>ISO-compliant QA frameworks</li>
+            <li><i class="fa-solid fa-check"></i>Continuous improvement programs</li>
+            <li><i class="fa-solid fa-check"></i>Independent audits & reviews</li>
+            <li><i class="fa-solid fa-check"></i>Client-focused quality reporting</li>
+          </ul>
+          <p class="small text-muted m-0">Assurance processes ensure consistent compliance and reliability across all projects.</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+<section id="accreditations" class="section mt-5">
+  <div class="container text-center">
+    <h2 class="gradient-heading mb-4">Accreditations & Certifications</h2>
+    <p class="section-sub">
+      JTS Inspection Services is accredited by leading international bodies, ensuring compliance and credibility.
+    </p>
+
+    <div class="row justify-content-center gy-4">
+      <div class="col-6 col-md-2">
+        <img src="asset/images/accreditations/iso.png" alt="ISO Accreditation" class="img-fluid accreditation-icon">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="asset/images/accreditations/nata.png" alt="NATA Accreditation" class="img-fluid accreditation-icon">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="asset/images/accreditations/irata.png" alt="IRATA Accreditation" class="img-fluid accreditation-icon">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="asset/images/accreditations/aindt.png" alt="AINDT Accreditation" class="img-fluid accreditation-icon">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="asset/images/accreditations/api.png" alt="API Accreditation" class="img-fluid accreditation-icon">
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="text-center py-4">
   <small>&copy; <span id="year"></span> JTS Inspection Services. All rights reserved.</small>
 </footer>
 
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   // Dark mode toggle

@@ -252,6 +252,27 @@ body {
 .first-muted {
   color: #ff6600 !important; /* orange */
 }
+.accreditation-box {
+  background-color: #ffffff;   /* white background */
+  border-radius: 8px;          /* rounded corners */
+  padding: 10px;               /* spacing around logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;               /* consistent tile height */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+.accreditation-icon {
+  max-height: 80px;            /* keeps logos consistent */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.accreditation-icon:hover {
+  transform: scale(1.1);       /* subtle zoom on hover */
+}
+
 
 /* Footer */
 /* Base footer theme — Oishii-inspired */

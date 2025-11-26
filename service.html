@@ -7,7 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
 
   <style>
     /* Base + dark mode */
@@ -117,7 +118,6 @@
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html"><strong>Home</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html"><strong>Services</strong></a></li>
         <li class="nav-item"><a class="nav-link" href="industries.html"><strong>Industries</strong></a></li>
         <li class="nav-item"><a class="nav-link" href="compliance.html"><strong>Compliance</strong></a></li>
         <li class="nav-item"><a class="nav-link" href="vacancy.html"><strong>Vacancies</strong></a></li>
@@ -132,109 +132,125 @@
   <p class="section-sub">Certified inspection solutions with modern equipment and rigorous procedures, tailored to PNG conditions.</p>
 </header>
 
-<!-- Services Section -->
 <section id="services" class="section bg-light">
   <div class="container">
-    <!-- Header -->
-    <div class="row mb-4 align-items-end">
-      <div class="col-lg-8">
-        <h2 class="section-title" data-en="Conventional and advanced NDT services" data-tp="Konvensenal na advans NDT ol servis">
-          Conventional and Advanced NDT Services
+    <h2 class="section-title gradient-heading mb-4">
+      NDT & Inspection Services
+    </h2>
+    <p class="section-sub">
+      Explore our full range of certified inspection solutions, tailored to PNG conditions.
+    </p>
+
+    <!-- Accordion -->
+    <div class="accordion" id="servicesAccordion">
+
+      <!-- Conventional NDT -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingConventional">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConventional" aria-expanded="true" aria-controls="collapseConventional">
+            Conventional NDT
+          </button>
         </h2>
-        <p class="section-sub" data-en="We deliver certified inspection solutions with modern equipment and rigorous procedures, tailored to PNG conditions." data-tp="Mipela i wok wantaim ol nupela ekwipmen na stretpela fasin, i stret long PNG kondisen.">
-          We deliver certified inspection solutions with modern equipment and rigorous procedures, tailored to PNG conditions.
-        </p>
-      </div>
-      <div class="col-lg-4 text-lg-end">
-        <a href="#contact" class="btn btn-accent">
-          <i class="fa-solid fa-calendar-check"></i>
-          <span data-en="Request a quote" data-tp="Askim prais">Request a Quote</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Conventional & Advanced -->
-    <div class="row gy-4">
-      <div class="col-md-6">
-        <div class="card h-100 p-4">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="icon-circle"><i class="fa-solid fa-wrench"></i></div>
-            <h3 class="h6 m-0" data-en="Conventional NDT" data-tp="Konvensenal NDT">Conventional NDT</h3>
+        <div id="collapseConventional" class="accordion-collapse collapse show" aria-labelledby="headingConventional" data-bs-parent="#servicesAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>🌀 Ultrasonic Testing (UT) — detects internal flaws and wall thickness. <small>Standards: AS 2207, ASME V, API 5UE</small></li>
+              <li>🧲 Magnetic Particle Testing (MT/MPT) — surface & near-surface defects. <small>Standards: AS 1171, ASME V, ASTM E709</small></li>
+              <li>💧 Liquid Penetrant Testing (PT/LPT) — surface-breaking defects. <small>Standards: AS 2062, ASME V, ASTM E165</small></li>
+              <li>☢ Radiographic Testing (RT) — X-ray/gamma radiation for internal flaws. <small>Standards: ASME V, API 1104, ISO 17636</small></li>
+              <li>👁 Visual Testing (VT) — first-line inspection for welds & structures. <small>Standards: AS 3978, ASME V, API 577</small></li>
+            </ul>
           </div>
-          <ul class="list-check list-unstyled">
-            <li><i class="fa-solid fa-check"></i>Ultrasonic Testing (UT)</li>
-            <li><i class="fa-solid fa-check"></i>Magnetic Particle Testing (MT)</li>
-            <li><i class="fa-solid fa-check"></i>Liquid Penetrant Testing (PT)</li>
-            <li><i class="fa-solid fa-check"></i>Radiographic Testing (RT)</li>
-            <li><i class="fa-solid fa-check"></i>Visual Inspection (VT)</li>
-          </ul>
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="card h-100 p-4">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="icon-circle"><i class="fa-solid fa-computer"></i></div>
-            <h3 class="h6 m-0" data-en="Advanced NDT" data-tp="Advans NDT">Advanced NDT</h3>
+      <!-- Advanced NDT -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAdvanced">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced" aria-expanded="false" aria-controls="collapseAdvanced">
+            Advanced NDT
+          </button>
+        </h2>
+        <div id="collapseAdvanced" class="accordion-collapse collapse" aria-labelledby="headingAdvanced" data-bs-parent="#servicesAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>🌀 Eddy Current Testing (ET) — detects flaws in conductive materials. <small>Standards: AS 4544, ASTM E243, ASME V</small></li>
+              <li>📡 Phased Array Ultrasonic Testing (PAUT) — 2D/3D flaw imaging. <small>Standards: ASME V, API 579, ISO 13588</small></li>
+            </ul>
           </div>
-          <ul class="list-check list-unstyled">
-            <li><i class="fa-solid fa-check"></i>Phased Array Ultrasonic Testing (PAUT)</li>
-            <li><i class="fa-solid fa-check"></i>Time of Flight Diffraction (TOFD)</li>
-            <li><i class="fa-solid fa-check"></i>Eddy Current Testing (ET)</li>
-            <li><i class="fa-solid fa-check"></i>Magnetic Flux Leakage (MFL)</li>
-            <li><i class="fa-solid fa-check"></i>Infrared Thermography (IR)</li>
-            <li><i class="fa-solid fa-check"></i>Acoustic Emission (AE)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Asset Integrity, QA/QC, Mobilization -->
-    <div class="row gy-4 mt-1">
-      <div class="col-lg-4">
-        <div class="card h-100 p-4">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="icon-circle"><i class="fa-solid fa-industry"></i></div>
-            <h3 class="h6 m-0">Asset Integrity</h3>
-          </div>
-          <ul class="list-check list-unstyled">
-            <li><i class="fa-solid fa-check"></i>Pipeline integrity assessment</li>
-            <li><i class="fa-solid fa-check"></i>Pressure equipment inspection</li>
-            <li><i class="fa-solid fa-check"></i>Corrosion monitoring & RBI</li>
-            <li><i class="fa-solid fa-check"></i>Fitness-for-service screening</li>
-          </ul>
         </div>
       </div>
 
-      <div class="col-lg-4">
-        <div class="card h-100 p-4">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="icon-circle"><i class="fa-solid fa-clipboard-check"></i></div>
-            <h3 class="h6 m-0">QA/QC & Procedures</h3>
+      <!-- In-Service & API Inspections -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAPI">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAPI" aria-expanded="false" aria-controls="collapseAPI">
+            In-Service & API Inspections
+          </button>
+        </h2>
+        <div id="collapseAPI" class="accordion-collapse collapse" aria-labelledby="headingAPI" data-bs-parent="#servicesAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Pressure Vessel & Storage Tank Inspection <small>Standards: API 510, API 653, AS 3788</small></li>
+              <li>Pipeline Integrity & Corrosion Monitoring</li>
+              <li>API 653, 510, 570 Certified Inspections</li>
+            </ul>
           </div>
-          <ul class="list-check list-unstyled">
-            <li><i class="fa-solid fa-check"></i>Project-specific ITP & method statements</li>
-            <li><i class="fa-solid fa-check"></i>Calibration & equipment control</li>
-            <li><i class="fa-solid fa-check"></i>Reporting with traceability</li>
-            <li><i class="fa-solid fa-check"></i>HSE compliance across worksites</li>
-          </ul>
         </div>
       </div>
 
-      <div class="col-lg-4">
-        <div class="card h-100 p-4">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="icon-circle"><i class="fa-solid fa-truck-fast"></i></div>
-            <h3 class="h6 m-0">Mobilization</h3>
+      <!-- Welding & QA/QC -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingWelding">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWelding" aria-expanded="false" aria-controls="collapseWelding">
+            Welding & QA/QC
+          </button>
+        </h2>
+        <div id="collapseWelding" class="accordion-collapse collapse" aria-labelledby="headingWelding" data-bs-parent="#servicesAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Welding Inspection — WPS, PQR, welder qualifications <small>Standards: AS/NZS 1554, ASME IX, API 1104</small></li>
+              <li>Project QA/QC coordination</li>
+              <li>Calibration & equipment control</li>
+              <li>Reporting with traceability</li>
+            </ul>
           </div>
-          <ul class="list-check list-unstyled">
-            <li><i class="fa-solid fa-check"></i>Rapid deployment nationwide</li>
-            <li><i class="fa-solid fa-check"></i>Madang & Port Moresby hubs</li>
-            <li><i class="fa-solid fa-check"></i>Remote site readiness</li>
-            <li><i class="fa-solid fa-check"></i>Short- and long-term projects</li>
-          </ul>
         </div>
       </div>
+
+      <!-- Specialized Services -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSpecialized">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecialized" aria-expanded="false" aria-controls="collapseSpecialized">
+            Specialized Services
+          </button>
+        </h2>
+        <div id="collapseSpecialized" class="accordion-collapse collapse" aria-labelledby="headingSpecialized" data-bs-parent="#servicesAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>🏗 Lifting Equipment Inspection — cranes, hoists, slings, shackles <small>Standards: LEEA, AS 4991, AS 1418, ISO 9927</small></li>
+              <li>🧗 Rope Access Services — IRATA-certified technicians for high-access inspections</li>
+              <li>NACE Coating Inspections</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Engineering & Fabrication -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEngineering">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEngineering" aria-expanded="false" aria-controls="collapseEngineering">
+            Engineering & Design / Fabrication & Welding
+          </button>
+        </h2>
+        <div id="collapseEngineering" class="accordion-collapse collapse" aria-labelledby="headingEngineering" data-bs-parent="#servicesAccordion">
+          <div class="accordion-body">
+            <p><strong>Engineering & Design:</strong> From concept through commissioning — problem definition, design & modelling, testing & evaluation, documentation, and project management.</p>
+            <p><strong>Fabrication & Welding:</strong> Quality welding and fabrication for piping, structural, and mechanical assets. Welders qualified to AS 1554, AS 3993, AS 2885, ASME IX, ASME B31.3, AS 4100, AS 4140, and more.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -242,7 +258,7 @@
 <footer class="text-center py-4">
   <small>&copy; <span id="year"></span> JTS Inspection Services. All rights reserved.</small>
 </footer>
-
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   // Dark mode toggle
