@@ -83,7 +83,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+h5{
+  font-family: 'Playfair Display', serif;
+  }
 /* Navbar */
 .navbar {
   backdrop-filter: saturate(180%) blur(10px);
@@ -155,11 +157,23 @@ body {
 
 
 /* Hero section */
+
 .hero {
   position: relative;
-  background: url("../images/header1.jpg") no-repeat center center/cover;
-  color: #fff; /* default text color */
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
 }
+
+@media (max-width: 991px) { /* tablets and below */
+  .hero {
+    height: auto;       /* let content expand */
+    min-height: 100vh;  /* still fills screen if content is short */
+    overflow: visible;
+    padding: 2rem 0;    /* add breathing space */
+  }
+}
+
 
 /* Overlay layer */
 .hero::before {
@@ -184,6 +198,22 @@ body {
 .hero p,
 .hero .chip span {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+.hero h1 {
+  font-family: 'Alata', sans-serif;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;      /* makes video behave like background image */
+  z-index: -2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;             /* keep content above video */
 }
 
 
@@ -250,6 +280,13 @@ body {
 .list-check li span {
   color: #fff; /* pure white for clarity */
 }
+.list-ndt i.fa-check {
+  color: #fee600;   /* bright yellow for NDT list */
+}
+.list-ndt li {
+  color: #ffffff;          /* sets text to white */
+}
+
 .d-flex.align-items-center.gap-3.mb-3 {
   color: #fff; /* makes all text inside white */
 }
