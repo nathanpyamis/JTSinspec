@@ -21,6 +21,25 @@ background: linear-gradient(to left,#ffffff , #750108);
   color: #fee600;            /* yellow text on hover */
   border-radius: 4px;        /* optional: rounded corners */
 }
+.social-icons {
+  display: flex !important;       /* force row layout */
+  flex-direction: row !important; /* override any column inheritance */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* vertical centering */
+  gap: 15px;                      /* spacing between icons */
+  margin-top: 10px;               /* space above icons */
+}
+
+.social-icons a {
+  color: #fee600;                 /* compliance yellow */
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;                 /* blue hover effect */
+}
+
 
     body.dark-mode .gradient-heading,
     body.dark-mode .section-title {
