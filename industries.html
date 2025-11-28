@@ -8,76 +8,6 @@
   <link rel="stylesheet" href="asset/css/industries.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<style>
-  /* Default light mode */
-  body {
-    background-color: #f8f9fa;
-    color: #212529;
-  }
-
-  /* Dark mode styles */
-  body.dark-mode {
-    background-color: #212529;
-    color: #f8f9fa;
-  }
-
-  /* Force all text elements to white in dark mode */
-  body.dark-mode p,
-  body.dark-mode span,
-  body.dark-mode a,
-  body.dark-mode h1,
-  body.dark-mode h2,
-  body.dark-mode h3,
-  body.dark-mode h4,
-  body.dark-mode h5,
-  body.dark-mode h6 {
-    color: #ffffff !important;
-  }
-
-  /* Optional: adjust anchor hover color */
-  body.dark-mode a:hover {
-    color: #0d6efd; /* Bootstrap primary blue */
-  }
-
-  /* Buttons in dark mode */
-  body.dark-mode .btn-outline-muted {
-    color: #f8f9fa;
-    border-color: #f8f9fa;
-  }
-    /* Default gradient (light mode) */
-  .gradient-heading {
-    background: linear-gradient(90deg, #0d6efd, #6610f2); /* blue → purple */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Dark mode gradient override */
-  body.dark-mode .gradient-heading {
-    background: linear-gradient(90deg, #ffffff, #ffffff); /* pure white */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;}
-
-  /* Custom outline-muted style (light mode) */
-  .btn-outline-muted {
-    color: #212529;
-    border: 1px solid #adb5bd;
-  }
-  .btn-outline-muted:hover {
-    background-color: #e9ecef;
-    color: #212529;
-  }
-
-  /* Dark mode button override */
-  body.dark-mode .btn-outline-muted {
-    color: #ffffff;
-    border: 1px solid #ffffff;
-  }
-  body.dark-mode .btn-outline-muted:hover {
-    background-color: #ffffff;
-    color: #212529; /* dark text on hover */
-  }
-
-</style>
 
 </head>
 <body>
@@ -89,11 +19,6 @@
     </a>
 
 <div class="d-flex align-items-center gap-2 ms-auto">
-  <!-- Dark Mode Toggle -->
-  <button class="btn btn-sm btn-outline-muted theme-toggle" aria-label="Tanem dark mode">
-    <i class="bi bi-moon"></i><span class="ms-2">Dark</span>
-  </button>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -118,70 +43,109 @@
 
 <main class="container">
 
-  <!-- Oil & Gas -->
-  <article id="oilgas" class="industry-article">
+  <!-- Industry Banners -->
+  <section id="industry-highlights" class="industry-highlights">
+
+    <!-- Oil & Gas -->
+    <a href="#oilgas" class="industry-banner" style="background-image: url('asset/images/industries/oil.jpg');">
+      <div class="overlay">
+        <h3 class="headline">Oil & Gas</h3>
+      </div>
+    </a>
+
+    <!-- Marine -->
+    <a href="#marine" class="industry-banner" style="background-image: url('asset/images/industries/marine.jpeg');">
+      <div class="overlay">
+        <h3 class="headline">Marine</h3>
+      </div>
+    </a>
+
+    <!-- Mining -->
+    <a href="#mining" class="industry-banner" style="background-image: url('asset/images/industries/mining.png');">
+      <div class="overlay">
+        <h3 class="headline">Mining</h3>
+      </div>
+    </a>
+
+    <!-- Power & Utilities -->
+    <a href="#power" class="industry-banner" style="background-image: url('asset/images/industries/power.jpeg');">
+      <div class="overlay">
+        <h3 class="headline">Power & Utilities</h3>
+      </div>
+    </a>
+
+    <!-- Manufacturing -->
+    <a href="#manufacturing" class="industry-banner" style="background-image: url('asset/images/industries/manufacturing.webp');">
+      <div class="overlay">
+        <h3 class="headline">Manufacturing</h3>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- Detailed Sections -->
+  <article id="oilgas" class="industry-detail">
     <h2 class="gradient-heading">Oil & Gas</h2>
     <img src="asset/images/industries/oil.jpg" alt="Oil & Gas" class="article-img">
     <p>
       Non-Destructive Testing (NDT) is indispensable in the oil and gas sector, where pipelines, tanks, and offshore rigs face corrosion, erosion, and fatigue. Techniques like ultrasonic testing, radiography, and magnetic particle inspection detect flaws before they escalate. Asset Integrity Management ensures compliance with international standards, extending asset life and reducing costly downtime.
     </p>
+    <a href="#industry-highlights" class="back-btn">← Back to Industries</a>
   </article>
 
-  <!-- Marine -->
-  <article id="marine" class="industry-article">
+  <article id="marine" class="industry-detail">
     <h2 class="gradient-heading">Marine</h2>
     <img src="asset/images/industries/marine.jpeg" alt="Marine" class="article-img">
     <p>
       Marine and offshore assets endure saltwater corrosion, wave fatigue, and extreme weather. NDT methods such as ultrasonic thickness gauging, eddy current testing, and infrared thermography are adapted for underwater inspections. Asset Integrity Management integrates risk assessments and preventive maintenance to safeguard ships, offshore rigs, and wind farms.
     </p>
+    <a href="#industry-highlights" class="back-btn">← Back to Industries</a>
   </article>
 
-  <!-- Mining -->
-  <article id="mining" class="industry-article">
+  <article id="mining" class="industry-detail">
     <h2 class="gradient-heading">Mining</h2>
     <img src="asset/images/industries/mining.png" alt="Mining" class="article-img">
     <p>
       Mining operations rely on heavy machinery and structural assets that endure constant stress. NDT helps detect early defects in welds, pressure vessels, and conveyor systems, while asset integrity programs provide condition monitoring and shutdown planning to minimize downtime. This proactive approach enhances safety and extends the lifespan of mining equipment.
     </p>
+    <a href="#industry-highlights" class="back-btn">← Back to Industries</a>
   </article>
 
-  <!-- Power & Utilities -->
-  <article id="power" class="industry-article">
+  <article id="power" class="industry-detail">
     <h2 class="gradient-heading">Power & Utilities</h2>
     <img src="asset/images/industries/power.jpeg" alt="Power & Utilities" class="article-img">
     <p>
       In power generation and distribution, NDT ensures the reliability of turbines, boilers, and transmission systems. Techniques like phased array ultrasonic testing (PAUT) and time-of-flight diffraction (TOFD) are used to detect flaws in critical components. Asset Integrity Management strategies combine preventive maintenance and advanced inspection technologies to assure uninterrupted energy supply.
     </p>
+    <a href="#industry-highlights" class="back-btn">← Back to Industries</a>
   </article>
 
-  <!-- Manufacturing -->
-  <article id="manufacturing" class="industry-article">
+  <article id="manufacturing" class="industry-detail">
     <h2 class="gradient-heading">Manufacturing</h2>
     <img src="asset/images/industries/manufacturing.webp" alt="Manufacturing" class="article-img">
     <p>
       Manufacturing depends on consistent quality control across raw materials, production processes, and final products. NDT methods such as liquid penetrant testing, radiography, and acoustic emission safeguard against defects that could lead to recalls or safety hazards. Asset Integrity Management ensures structural reliability and compliance, reducing waste and reinforcing consumer trust.
     </p>
+    <a href="#industry-highlights" class="back-btn">← Back to Industries</a>
   </article>
 
 </main>
+<footer class="text-center py-4">
+  <small>&copy; <span id="year"></span> JTS Inspection Services. All rights reserved.</small>
+</footer>
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+  // Auto year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="asset/js/lang.js"></script>
   <script>
-    // Dark mode toggle
-    document.querySelector('.theme-toggle').addEventListener('click', function () {
-      document.body.classList.toggle('dark-mode');
-
-      // Optional: update icon/text dynamically
-      const icon = this.querySelector('i');
-      const text = this.querySelector('span');
-      if (document.body.classList.contains('dark-mode')) {
-        icon.className = 'bi bi-brightness-high'; // sun icon
-        text.textContent = 'Light';
-      } else {
-        icon.className = 'bi bi-moon';
-        text.textContent = 'Dark';
-      }
-    });
+  
   </script>
 </body>
 </html>

@@ -1,0 +1,110 @@
+/* Base + dark mode */
+    body {
+background: linear-gradient(to left,#ffffff , #750108);
+    }
+   div.container{
+    background: linear-gradient(to left,#ffffff , #750108);
+   }
+
+    /* Gradient heading */
+   .brand-badge{
+    color: #fee600;
+   }
+.navbar-nav .nav-link {
+  color: white;              /* default text color */
+  padding: 8px 15px;         /* spacing for clickable area */
+  transition: all 0.3s ease; /* smooth hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #0d6efd; /* Bootstrap blue or your custom blue */
+  color: #fee600;            /* yellow text on hover */
+  border-radius: 4px;        /* optional: rounded corners */
+}
+
+    body.dark-mode .gradient-heading,
+    body.dark-mode .section-title {
+      background: linear-gradient(90deg, #ffffff, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Buttons */
+    .btn-accent {
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+    }
+    .btn-accent:hover { background: #0b5ed7; color: #fff; }
+
+    .btn-outline-muted {
+      color: #212529;
+      border: 1px solid #adb5bd;
+    }
+    .btn-outline-muted:hover {
+      background-color: #e9ecef;
+      color: #212529;
+    }
+    body.dark-mode .btn-outline-muted {
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+    body.dark-mode .btn-outline-muted:hover {
+      background-color: #ffffff;
+      color: #212529;
+    }
+
+    /* Cards + icons */
+    .card { border: 1px solid #dee2e6; border-radius: 10px; }
+    body.dark-mode .card { background-color: #2b2b2b; border-color: #444; }
+
+    .icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #0d6efd;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    body.dark-mode .icon-circle { background: #6610f2; }
+
+    .list-check li { margin-bottom: 0.5rem; }
+    .list-check i { color: #0d6efd; margin-right: 0.5rem; }
+    body.dark-mode .list-check i { color: #ffffff; }
+
+    /* Header spacing */
+    .page-header { padding: 3rem 0 1rem;
+     background: url(../images/NDT2.jpg);
+     position: relative;
+     color: fff;
+     }
+     h2.section-title{
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; /* Medium */
+  color: #fee600;
+  background-color: #750008;
+  text-align: center;   /* centers the text inside the h2 */
+  padding: 10px;        /* optional: adds spacing */
+  margin: 0 auto;
+}
+    small.standard{
+      color:#0b84fe;
+    }
+    h1.gradient-heading{
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% transparency */
+  color: white; /* text color */
+  padding: 10px;
+}
+
+    p.section-sub{
+      background-color: rgba(0, 0, 0, 0.5); /* black with 50% transparency */
+  color: white; /* text color */
+  padding: 10px;
+    }
+    .service-li{
+      color: #750008;
+    }

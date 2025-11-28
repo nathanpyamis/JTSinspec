@@ -50,30 +50,11 @@ body.dark-mode .ms-2 {
   color: #000000 !important; /* force black */
 }
 
-body.dark-mode .brand-badge.px-3.py-2.rounded-3.fw-bold {
-  color: #000000 !important; /* force black */
+body .brand-badge.px-3.py-2.rounded-3.fw-bold {
+  color: #fee600 !important; /* force yellow */
 }
 
-/* Breadcrum */
-.breadcrumb-nav {
-  background: #f9fafc;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #ddd;
-}
 
-.breadcrumb {
-  margin: 0;
-  background: transparent;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #0a56cc;
-}
-
-.breadcrumb-item.active {
-  color: #555;
-}
 
 .dropdown .btn-brand {
   background: linear-gradient(to right, #0a56cc, #ff9933);
@@ -156,3 +137,82 @@ body.dark-mode .brand-badge.px-3.py-2.rounded-3.fw-bold {
 background-color: rgb(247 247 247);
 position: sticky;
   }
+      /* Default gradient (light mode) */
+  .gradient-heading {
+    color: #fee600;
+  }
+
+
+  /* Custom outline-muted style (light mode) */
+  .btn-outline-muted {
+    color: #212529;
+    border: 1px solid #adb5bd;
+  }
+  .btn-outline-muted:hover {
+    background-color: #e9ecef;
+    color: #212529;
+  }
+
+.industry-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-banner .overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-banner .headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fee600;
+  text-align: center;
+}
+
+.industry-detail {
+  display: none; /* hidden until clicked */
+  margin: 40px 0;
+}
+
+.industry-detail:target {
+  display: block; /* shows when anchor is clicked */
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #0d6efd; /* Bootstrap blue */
+  color: #fee600;            /* compliance yellow */
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #212529; /* dark background */
+  color: #fee600;
+}
+main.container{
+    background: linear-gradient(to left,#d0d0cf , #750108);
+   }
+div.container{
+    background: linear-gradient(to left,#ffffff , #750108);
+   }
+p{
+ color: #fee600; 
+}

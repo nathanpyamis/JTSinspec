@@ -8,95 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-
-  <style>
-    /* Base + dark mode */
-    body {
-      background-color: #f8f9fa;
-      color: #212529;
-    }
-    body.dark-mode {
-      background-color: #212529;
-      color: #f8f9fa;
-    }
-    body.dark-mode p,
-    body.dark-mode span,
-    body.dark-mode a,
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode h6 {
-      color: #ffffff !important;
-    }
-    body.dark-mode a:hover { color: #0d6efd; }
-
-    /* Gradient heading */
-    .gradient-heading,
-    .section-title {
-      background: linear-gradient(90deg, #0d6efd, #6610f2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    body.dark-mode .gradient-heading,
-    body.dark-mode .section-title {
-      background: linear-gradient(90deg, #ffffff, #ffffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Buttons */
-    .btn-accent {
-      background: #0d6efd;
-      color: #fff;
-      border: none;
-    }
-    .btn-accent:hover { background: #0b5ed7; color: #fff; }
-
-    .btn-outline-muted {
-      color: #212529;
-      border: 1px solid #adb5bd;
-    }
-    .btn-outline-muted:hover {
-      background-color: #e9ecef;
-      color: #212529;
-    }
-    body.dark-mode .btn-outline-muted {
-      color: #ffffff;
-      border: 1px solid #ffffff;
-    }
-    body.dark-mode .btn-outline-muted:hover {
-      background-color: #ffffff;
-      color: #212529;
-    }
-
-    /* Cards + icons */
-    .card { border: 1px solid #dee2e6; border-radius: 10px; }
-    body.dark-mode .card { background-color: #2b2b2b; border-color: #444; }
-
-    .icon-circle {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #0d6efd;
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-    body.dark-mode .icon-circle { background: #6610f2; }
-
-    .list-check li { margin-bottom: 0.5rem; }
-    .list-check i { color: #0d6efd; margin-right: 0.5rem; }
-    body.dark-mode .list-check i { color: #ffffff; }
-
-    /* Header spacing */
-    .page-header { padding: 3rem 0 1rem; }
-  </style>
+  <link rel="stylesheet" type="text/css" href="asset/css/service.css">
+ <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg sticky-top bg-light">
@@ -107,9 +20,6 @@
     </a>
 
     <div class="d-flex align-items-center gap-2 ms-auto">
-      <button class="btn btn-sm btn-outline-muted theme-toggle" aria-label="Toggle dark mode">
-        <i class="bi bi-moon"></i><span class="ms-2">Dark</span>
-      </button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -134,9 +44,9 @@
 
 <section id="services" class="section bg-light">
   <div class="container">
-    <h2 class="section-title gradient-heading mb-4">
-      NDT & Inspection Services
-    </h2>
+        <h2 class="section-title custom">
+          Conventional and Advanced NDT Services
+        </h2>
     <p class="section-sub">
       Explore our full range of certified inspection solutions, tailored to PNG conditions.
     </p>
@@ -154,12 +64,27 @@
         <div id="collapseConventional" class="accordion-collapse collapse show" aria-labelledby="headingConventional" data-bs-parent="#servicesAccordion">
           <div class="accordion-body">
             <ul>
-              <li>🌀 Ultrasonic Testing (UT) — detects internal flaws and wall thickness. <small>Standards: AS 2207, ASME V, API 5UE</small></li>
-              <li>🧲 Magnetic Particle Testing (MT/MPT) — surface & near-surface defects. <small>Standards: AS 1171, ASME V, ASTM E709</small></li>
-              <li>💧 Liquid Penetrant Testing (PT/LPT) — surface-breaking defects. <small>Standards: AS 2062, ASME V, ASTM E165</small></li>
-              <li>☢ Radiographic Testing (RT) — X-ray/gamma radiation for internal flaws. <small>Standards: ASME V, API 1104, ISO 17636</small></li>
-              <li>👁 Visual Testing (VT) — first-line inspection for welds & structures. <small>Standards: AS 3978, ASME V, API 577</small></li>
-            </ul>
+  <li><i class="fa fa-wave-square"></i> <strong class="service-li">Ultrasonic Testing (UT)</strong> — detects internal flaws and wall thickness. 
+    <small class="standard">Standards: AS 2207, ASME V, API 5UE</small>
+  </li>
+
+  <li><i class="fa fa-magnet"></i> <strong class="service-li">Magnetic Particle Testing (MT/MPT)</strong> — surface & near-surface defects. 
+    <small class="standard">Standards: AS 1171, ASME V, ASTM E709</small>
+  </li>
+
+  <li><i class="fa fa-tint"></i> <strong class="service-li">Liquid Penetrant Testing (PT/LPT)</strong> — surface-breaking defects. 
+    <small class="standard">Standards: AS 2062, ASME V, ASTM E165</small>
+  </li>
+
+  <li><i class="fa fa-radiation"></i> <strong class="service-li">Radiographic Testing (RT)</strong> — X-ray/gamma radiation for internal flaws. 
+    <small class="standard">Standards: ASME V, API 1104, ISO 17636</small>
+  </li>
+
+  <li><i class="fa fa-eye"></i> <strong class="service-li">Visual Testing (VT)</strong> — first-line inspection for welds & structures. 
+    <small class="standard">Standards: AS 3978, ASME V, API 577</small>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>
@@ -174,9 +99,24 @@
         <div id="collapseAdvanced" class="accordion-collapse collapse" aria-labelledby="headingAdvanced" data-bs-parent="#servicesAccordion">
           <div class="accordion-body">
             <ul>
-              <li>🌀 Eddy Current Testing (ET) — detects flaws in conductive materials. <small>Standards: AS 4544, ASTM E243, ASME V</small></li>
-              <li>📡 Phased Array Ultrasonic Testing (PAUT) — 2D/3D flaw imaging. <small>Standards: ASME V, API 579, ISO 13588</small></li>
-            </ul>
+  <li><i class="fa fa-bolt"></i> <strong class="service-li">Eddy Current Testing (ET)</strong> — Eddy current testing detects the smallest defects in various materials that
+ can minimize downtime and decrease inspection cost. At JTS Inspection
+ Services, our certified technicians use specialized eddy current testing equipment to provide a quick and acurate examination of <strong>Aircraft and Engine Components</strong>, <strong>Heat Exchanger Tubing</strong>
+ and <strong>Other Critical Engineering components</strong>
+    <small class="standard">Standards: AS 4544, ASTM E243, ASME V</small>
+  </li>
+
+  <li><i class="fa fa-satellite-dish"></i><strong class="service-li"> Phased Array Ultrasonic Testing (PAUT)</strong> — Phased Array Ultrasonic system utilize multi-element probes, which are individually excited
+ under computer control. By exiting each element in a controlled manner, a focus beam of
+ Ultrasonic can be generate. Software enables the beam to be steered. Two and three
+ dimensional views can be generated shown the sizes and locations of any flaws detected.
+ PAUT used to detect discontinuities such as cracks or flaws and thereby determine
+ component’s quality. Due to the possibility to control parameters such as beam angle and focus distance, this method is very inefficient regarding the defect and speed of testing.
+ <small class="standard">Advanced UT for 2D/3D flaw imaging in welds and complex geometries.</small> <br>
+    <small class="standard">Standards: ASME V, API 579, ISO 13588</small>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>
@@ -191,10 +131,15 @@
         <div id="collapseAPI" class="accordion-collapse collapse" aria-labelledby="headingAPI" data-bs-parent="#servicesAccordion">
           <div class="accordion-body">
             <ul>
-              <li>Pressure Vessel & Storage Tank Inspection <small>Standards: API 510, API 653, AS 3788</small></li>
-              <li>Pipeline Integrity & Corrosion Monitoring</li>
-              <li>API 653, 510, 570 Certified Inspections</li>
-            </ul>
+  <li><i class="fa fa-industry"></i> Pressure Vessel & Storage Tank Inspection 
+    <small class="standard">Standards: API 510, API 653, AS 3788</small>
+  </li>
+
+  <li><i class="fa fa-stream"></i> Pipeline Integrity & Corrosion Monitoring</li>
+
+  <li><i class="fa fa-certificate"></i> <small class="standard">API 653, 510, 570</small> Certified Inspections</li>
+</ul>
+
           </div>
         </div>
       </div>
@@ -209,11 +154,17 @@
         <div id="collapseWelding" class="accordion-collapse collapse" aria-labelledby="headingWelding" data-bs-parent="#servicesAccordion">
           <div class="accordion-body">
             <ul>
-              <li>Welding Inspection — WPS, PQR, welder qualifications <small>Standards: AS/NZS 1554, ASME IX, API 1104</small></li>
-              <li>Project QA/QC coordination</li>
-              <li>Calibration & equipment control</li>
-              <li>Reporting with traceability</li>
-            </ul>
+  <li><i class="fa fa-tools"></i> <strong class="service-li">Welding Inspection</strong> — WPS, PQR, welder qualifications 
+    <small class="standard">Standards: AS/NZS 1554, ASME IX, API 1104</small>
+  </li>
+
+  <li><i class="fa fa-tasks"></i> <strong class="service-li">Project QA/QC coordination</strong></li>
+
+  <li><i class="fa fa-cogs"></i> <strong class="service-li">Calibration & equipment control</strong></li>
+
+  <li><i class="fa fa-file-alt"></i> <strong class="service-li">Reporting with traceability</strong></li>
+</ul>
+
           </div>
         </div>
       </div>
@@ -228,10 +179,26 @@
         <div id="collapseSpecialized" class="accordion-collapse collapse" aria-labelledby="headingSpecialized" data-bs-parent="#servicesAccordion">
           <div class="accordion-body">
             <ul>
-              <li>🏗 Lifting Equipment Inspection — cranes, hoists, slings, shackles <small>Standards: LEEA, AS 4991, AS 1418, ISO 9927</small></li>
-              <li>🧗 Rope Access Services — IRATA-certified technicians for high-access inspections</li>
-              <li>NACE Coating Inspections</li>
-            </ul>
+  <li><i class="fa fa-crane"></i> <strong class="service-li">Lifting Equipment Inspection</strong> — cranes, hoists, slings, shackles 
+    <small class="standard">Standards: LEEA, AS 4991, AS 1418, ISO 9927</small>
+  </li>
+
+  <li><i class="fa fa-user-alt"></i> <strong class="service-li">Rope Access Services</strong> — We also provide Rope Access Inspections and Testing on for all industries who require
+ our services.
+ Our certified Rope Access Inspectors/Technicians are certified under and have
+ qualifications recognized by IRATA (Industrial Rope Access Trade Association) that
+ seek to promote safety and develop standards for rope access.
+ Our IRATA Inspector has experience in Mining, Offshore Oil & Gas, Build & Environment, Shipping & Harbors & Confined Spaces.<strong class="standard"> IRTA Certifications are all current and are valid for inspections</strong><ul>
+  <li>Safe and efficient access to difficult-to-reach areas using industrial rope techniques</li>
+<li> inspections</li>
+ <li>High-access NDT</li>
+ <li>Maintenance and repair</li>
+ <small class="standard">Standards: IRATA International Code of Practice (ICOP)</small></ul>
+ </li>
+
+  <li><i class="fa fa-paint-roller"></i> <strong class="service-li">NACE Coating Inspections</strong></li>
+</ul>
+
           </div>
         </div>
       </div>
@@ -245,8 +212,15 @@
         </h2>
         <div id="collapseEngineering" class="accordion-collapse collapse" aria-labelledby="headingEngineering" data-bs-parent="#servicesAccordion">
           <div class="accordion-body">
-            <p><strong>Engineering & Design:</strong> From concept through commissioning — problem definition, design & modelling, testing & evaluation, documentation, and project management.</p>
-            <p><strong>Fabrication & Welding:</strong> Quality welding and fabrication for piping, structural, and mechanical assets. Welders qualified to AS 1554, AS 3993, AS 2885, ASME IX, ASME B31.3, AS 4100, AS 4140, and more.</p>
+            <p><strong class="service-li">Problem Definition:</strong> Identifying & Analyzing problem or need that requires technical
+ solution.</p>
+ <p><strong class="service-li">Conceptualization and Research:</strong> Brainstorming and researching potential solution to a problem or need.</p>
+ <p><strong class="service-li"> Design and Modelling:</strong> Creating a detailed technical drawings, specifications, and
+ CAD models.</p>
+ <p><strong class="service-li">Testing & Evaluation:</strong> Rigorously testing prototypes to ensure they are functional, safe and meet project requirements.</p>
+ <p><strong class="service-li">Documentation:</strong> Creating Comprehensive documentation, including design changes, assembly instruction and maintenance procedures</p><p><strong class="service-li">Project Management</strong> Overseeing the project lifecycle, from preliminary engineering
+ and design development to construction support and final delivery and commisioning</p><hr>
+            <p><strong>Fabrication & Welding:</strong> Quality welding and fabrication for piping, structural, and mechanical assets. Welders qualified to <small class="standard">AS 1554, AS 3993, AS 2885, ASME IX, ASME B31.3, AS 4100, AS 4140</small>, and more.</p>
           </div>
         </div>
       </div>
@@ -261,19 +235,6 @@
 <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Dark mode toggle
-  document.querySelector('.theme-toggle').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-    const icon = this.querySelector('i');
-    const text = this.querySelector('span');
-    if (document.body.classList.contains('dark-mode')) {
-      icon.className = 'bi bi-brightness-high';
-      text.textContent = 'Light';
-    } else {
-      icon.className = 'bi bi-moon';
-      text.textContent = 'Dark';
-    }
-  });
 
   // Auto year
   document.getElementById('year').textContent = new Date().getFullYear();
