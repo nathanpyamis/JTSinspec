@@ -21,11 +21,12 @@ a.nav-link:hover {
 /* Gradient headings (light mode) */
 .gradient-heading {
   font-family: 'Fredericka the Great', cursive;
-  background: linear-gradient(to right, #0a56cc, #ff9933);
+  background: linear-gradient(to right, #000000, #ff9933);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #000000;
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .section-sub {
@@ -207,4 +208,7 @@ p {
 /* Navbar toggler */
 button.navbar-toggler {
   background-color: #750008;
+}
+.bg-dark{
+  background-color:rgb(255 255 255)!important ;
 }

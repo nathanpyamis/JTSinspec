@@ -5,78 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | JTS Inspection Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="asset/css/about.css">
 
-  <style>
-    body {
-      background-color: #f8f9fa;
-      color: #212529;
-    }
-    body.dark-mode {
-      background-color: #212529;
-      color: #f8f9fa;
-    }
-    body.dark-mode p,
-    body.dark-mode span,
-    body.dark-mode a,
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode h6 {
-      color: #ffffff !important;
-    }
-    body.dark-mode a:hover { color: #0d6efd; }
-
-    .gradient-heading {
-      background: linear-gradient(90deg, #0d6efd, #6610f2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    body.dark-mode .gradient-heading {
-      background: linear-gradient(90deg, #ffffff, #ffffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .icon-circle {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #0d6efd;
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-    body.dark-mode .icon-circle { background: #6610f2; }
-
-    .page-header { padding: 3rem 0 1rem; }
-    .about-card { border: 1px solid #dee2e6; border-radius: 10px; padding: 2rem; background: #fff; }
-    body.dark-mode .about-card { background: #2b2b2b; border-color: #444; }
-  </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg sticky-top bg-light">
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2 flex-wrap" href="index.html">
       <img src="asset/images/logo.png" alt="JTS Logo" width="40" height="40" class="rounded-circle" />
       <span class="brand-badge px-3 py-2 rounded-3 fw-bold">JTS Inspection Services</span>
     </a>
 
-    <div class="d-flex align-items-center gap-2 ms-auto">
-      <button class="btn btn-sm btn-outline-muted theme-toggle" aria-label="Toggle dark mode">
-        <i class="bi bi-moon"></i><span class="ms-2">Dark</span>
-      </button>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" 
+      aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="navbar-nav ms-auto">
@@ -88,17 +35,65 @@
         <li class="nav-item"><a class="nav-link" href="about.html"><strong>About</strong></a></li>
         <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
       </ul>
+
+      <!-- Social Media Icons -->
+      <div class="social-icons d-flex justify-content-center gap-3 mt-3 mt-lg-0">
+        <a href="https://facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/company/YourPage" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
   </div>
 </nav>
 
-<header class="page-header text-center">
-  <h1 class="gradient-heading">About Our Company</h1>
-  <p class="section-sub">JTS Inspection Services is a newly established Non-Destructive Testing (NDT) and Asset Integrity Company and 100% PNG owned, who are dedicated to providing high-quality inspection and testing services to various industries. With the Team of skilled professionals(both National and expatriate) and State-Of-art equipment. We ensure the highest level of accuracy and reliability in all our testing procedures.<br>
-JTS Inspection Services offer best Non Destructive Testing Services to our clients by what we do best. We provide excellent NDT Services for an extensive range of industry sectors. Our top class services in the development and use of non-destructive testing by ensuring that your plant assets, equipment, and products remain functional, efficient, and secure. We work with the different industry fields such as Aerospace, Oil & Gas, Mining, Process Engineering, Construction Projects and Petrochemicals</p>
+<header class="hero-section">
+  <div class="hero-overlay">
+    <div class="container text-center">
+      <h1 class="gradient-heading">About Our Company</h1>
+      <p class="section-sub">
+        JTS Inspection Services is a 100% PNG-owned Non-Destructive Testing (NDT) and Asset Integrity company.
+        We deliver certified inspection solutions across mining, oil & gas, marine, power, and manufacturing sectors.
+      </p>
+    </div>
+  </div>
 </header>
 
 <main class="container my-5">
+  <div class="row gy-4">
+    <div class="col-md-6">
+      <div class="about-card h-100">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <div class="icon-circle"><i class="fa-solid fa-building"></i></div>
+          <h2 class="h5 m-0 gradient-heading">Our Story</h2>
+        </div>
+        <p>
+          Established in 2023, JTS Inspection Services operates from hubs in Madang and Port Moresby, delivering
+          world-class inspection and testing services.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="about-card h-100">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <div class="icon-circle"><i class="fa-solid fa-bullseye"></i></div>
+          <h2 class="h5 m-0 gradient-heading">Our Mission</h2>
+        </div>
+        <p>
+          To provide reliable, advanced NDT services and asset integrity solutions with rapid turnaround,
+          uncompromising quality, and exceptional customer support.
+        </p>
+        <ul class="list-check list-unstyled">
+          <li><i class="fa-solid fa-check"></i> Compliance with AS, ASME, API, ISO, LEEA, and IRATA standards</li>
+          <li><i class="fa-solid fa-check"></i> Short lead times and rapid delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+
   <div class="row gy-4">
     <div class="col-md-6">
       <div class="about-card h-100">
@@ -113,19 +108,21 @@ JTS Inspection Services offer best Non Destructive Testing Services to our clien
     </div>
 
     <div class="col-md-6">
-      <div class="about-card h-100">
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <div class="icon-circle"><i class="fa-solid fa-bullseye"></i></div>
-          <h2 class="h5 m-0 gradient-heading">Our Mission</h2>
-        </div>
-        <p>Our mission is to provide current and future customers with the highest quality advanced Non-Destructive Testing (NDT) equipment, services, and support. We take pride in short lead times, rapid delivery, and quality services that enable our client’s to meet evolving job requirements. Our Team strives to provide world-class services and support after the sale to ensure the customer/client remains up and running without interruptions.
-          <ul>
-            <li>To provide Reliable, Conventional, Advanced NDT Services and Asset Integrity solutions with rapid turnaround, uncompromising Quality, Safety and exceptional Customer Support.</li>
-            <li>All services are delivered in compliance with international standards including AS, ASME, API, ISO, LEEA, and IRATA.</li>
-          </ul>
-        </p>
-      </div>
+  <div class="about-card h-100">
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <div class="icon-circle"><i class="fa-solid fa-bullseye"></i></div>
+      <h2 class="h5 m-0 gradient-heading">Our Mission</h2>
     </div>
+    <p>
+      Our mission is to provide current and future customers with the highest quality advanced Non-Destructive Testing (NDT) equipment, services, and support. We take pride in short lead times, rapid delivery, and quality services that enable our client’s to meet evolving job requirements. Our Team strives to provide world-class services and support after the sale to ensure the customer/client remains up and running without interruptions.
+    </p>
+    <ul>
+      <li>To provide Reliable, Conventional, Advanced NDT Services and Asset Integrity solutions with rapid turnaround, uncompromising Quality, Safety and exceptional Customer Support.</li>
+      <li>All services are delivered in compliance with international standards including AS, ASME, API, ISO, LEEA, and IRATA.</li>
+    </ul>
+  </div>
+</div>
+
 
     <div class="col-md-6">
       <div class="about-card h-100">
@@ -162,20 +159,6 @@ JTS Inspection Services offer best Non Destructive Testing Services to our clien
 <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Dark mode toggle
-  document.querySelector('.theme-toggle').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-    const icon = this.querySelector('i');
-    const text = this.querySelector('span');
-    if (document.body.classList.contains('dark-mode')) {
-      icon.className = 'bi bi-brightness-high';
-      text.textContent = 'Light';
-    } else {
-      icon.className = 'bi bi-moon';
-      text.textContent = 'Dark';
-    }
-  });
-
   // Auto year
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>

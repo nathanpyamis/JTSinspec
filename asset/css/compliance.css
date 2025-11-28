@@ -1,0 +1,143 @@
+ body {
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+
+    .btn-outline-muted {
+      color: #212529;
+      border: 1px solid #adb5bd;
+    }
+    .btn-outline-muted:hover {
+      background-color: #e9ecef;
+      color: #212529;
+    }
+
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #0d6efd;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .list-check li {
+      margin-bottom: 0.5rem;
+    }
+    .list-check i {
+      color: #0d6efd;
+      margin-right: 0.5rem;
+    }
+  
+    .accreditation-icon {
+  max-height: 80px;   /* keeps icons consistent */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.accreditation-icon:hover {
+  transform: scale(1.1); /* subtle zoom on hover */
+}
+nav.navbar.navbar-expand-lg{
+  background-color: ;
+}
+    body {
+background: linear-gradient(to left,#ffffff , #750108);
+    }
+   div.container{
+    background: linear-gradient(to left,#ffffff , #750108);
+   }
+
+    /* Gradient heading */
+   .brand-badge{
+    color: #fee600;
+   }
+.navbar-nav .nav-link {
+  color: white;              /* default text color */
+  padding: 8px 15px;         /* spacing for clickable area */
+  transition: all 0.3s ease; /* smooth hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #0d6efd; /* Bootstrap blue or your custom blue */
+  color: #fee600;            /* yellow text on hover */
+  border-radius: 4px;        /* optional: rounded corners */
+}
+.social-icons {
+  display: flex !important;       /* force row layout */
+  flex-direction: row !important; /* override any column inheritance */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* vertical centering */
+  gap: 15px;                      /* spacing between icons */
+  margin-top: 10px;               /* space above icons */
+}
+
+.social-icons a {
+  color: #fee600;                 /* compliance yellow */
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;                 /* blue hover effect */
+}
+#accreditations {
+  background: linear-gradient(to right, #0a56cc, #ff9933); /* brand gradient */
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  margin: 3rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+#accreditations h2 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fee600, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#accreditations .accreditation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+#accreditations .accreditation-item {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fee600;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#accreditations .accreditation-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #fee600;
+}
+
+#accreditations .accreditation-item img {
+  max-width: 80px;
+  margin-bottom: 1rem;
+}
+
+#accreditations .accreditation-item p {
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+}
+ h1{
+ font-family: 'Fredericka the Great', cursive;
+ color: #fee600 !important;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+}
