@@ -10,7 +10,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  background: linear-gradient(to left, #ffffff, #75010866);
+  background: linear-gradient(to left, #ffffff, #efe8e8b3);
 }
 
 .brand-badge {
@@ -23,7 +23,7 @@ body {
 
 /* Navbar */
 .navbar-nav .nav-link {
-  color: white;
+  color: #750008;
   padding: 8px 15px;
   transition: all 0.3s ease;
 }
@@ -35,19 +35,19 @@ body {
 
 /* Social Icons */
 .social-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
+  display: flex !important;       /* force row layout */
+  flex-direction: row !important; /* override any column inheritance */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* vertical centering */
+  gap: 5px;                      /* slightly tighter spacing */
+  margin-top: 8px;                /* reduced top margin */
 }
+
 .social-icons a {
-  color: #fee600;
-  font-size: 1.4rem;
+  color: #750008;                 /* brand maroon */
+  font-size: 1.1rem;              /* smaller icon size */
   transition: color 0.3s ease;
-}
-.social-icons a:hover {
+}.social-icons a:hover {
   color: #0d6efd;
 }
 
@@ -121,4 +121,8 @@ p.section-sub {
 footer {
   background-color: #750108;
   color: #fee600;
+}
+.navbar-brand img {
+  width: 80px;
+  height: 80px;
 }

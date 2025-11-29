@@ -71,13 +71,13 @@ background: linear-gradient(to left,#ffffff , #750108);
   flex-direction: row !important; /* override any column inheritance */
   justify-content: center;        /* center horizontally */
   align-items: center;            /* vertical centering */
-  gap: 15px;                      /* spacing between icons */
-  margin-top: 10px;               /* space above icons */
+  gap: 5px;                      /* slightly tighter spacing */
+  margin-top: 8px;                /* reduced top margin */
 }
 
 .social-icons a {
-  color: #fee600;                 /* compliance yellow */
-  font-size: 1.4rem;
+  color: #750008;                 /* brand maroon */
+  font-size: 1.1rem;              /* smaller icon size */
   transition: color 0.3s ease;
 }
 
@@ -140,4 +140,8 @@ background: linear-gradient(to left,#ffffff , #750108);
  color: #fee600 !important;
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1.5rem;
+}
+.navbar-brand img {
+  width: 80px;
+  height: 80px;
 }

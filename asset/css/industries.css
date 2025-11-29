@@ -189,16 +189,17 @@ p {
 
 /* Social icons */
 .social-icons {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
+  display: flex !important;       /* force row layout */
+  flex-direction: row !important; /* override any column inheritance */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* vertical centering */
+  gap: 5px;                      /* slightly tighter spacing */
+  margin-top: 8px;                /* reduced top margin */
 }
+
 .social-icons a {
-  color: #fee600;
-  font-size: 1.4rem;
+  color: #750008;                 /* brand maroon */
+  font-size: 1.1rem;              /* smaller icon size */
   transition: color 0.3s ease;
 }
 .social-icons a:hover {
@@ -211,4 +212,8 @@ button.navbar-toggler {
 }
 .bg-dark{
   background-color:rgb(255 255 255)!important ;
+}
+.navbar-brand img {
+  width: 80px;
+  height: 80px;
 }
