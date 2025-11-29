@@ -96,12 +96,21 @@ background: linear-gradient(to left,#ffffff , #750108);
     body.dark-mode .list-check i { color: #ffffff; }
 
     /* Header spacing */
-    .page-header { padding: 3rem 0 1rem;
-     background: url(../images/NDT2.jpg);
-     position: relative;
-     color: fff;
-     }
-     h2.section-title{
+    .page-header {
+
+  background-image: url('../images/NDT2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* steady background */
+  height: 400px;                /* adjust height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+  h2.section-title{
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700; /* Medium */
   color: #fee600;
@@ -109,11 +118,11 @@ background: linear-gradient(to left,#ffffff , #750108);
   text-align: center;   /* centers the text inside the h2 */
   padding: 10px;        /* optional: adds spacing */
   margin: 0 auto;
-}
-    small.standard{
+   }
+  small.standard{
       color:#0b84fe;
     }
-    h1.gradient-heading{
+  h1.gradient-heading{
   background-color: rgba(0, 0, 0, 0.5); /* black with 50% transparency */
   color: white; /* text color */
   padding: 10px;

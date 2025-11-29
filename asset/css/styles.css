@@ -487,8 +487,14 @@ html { scroll-behavior: smooth; }
 
 /* Services Section */
 #services {
-  background: linear-gradient(to right,#ffffff , #750108);
+  
+  background-image: url('../images/NDT2.jpg'); /* your image path */
+  background-size: cover;       /* make sure it covers the whole viewport */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* avoid tiling */
+  background-attachment: fixed; /* keeps image steady */
 }
+
 #services .card {
   border: none;
   border-radius: 16px;
@@ -518,6 +524,10 @@ html { scroll-behavior: smooth; }
 #services p.small{
   color: rgb(0 0 0 / 96%);
 } 
+div.col-lg-8{
+  color: #ffffff;
+  background-color:#0000007a ;
+}
 
 /* Coverage */
 #coverage {
