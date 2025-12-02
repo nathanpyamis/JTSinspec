@@ -302,7 +302,7 @@ h2.section-title{
 }
 .chip {
   display: inline-block;
-  background-color: #f1f3f5;   /* light gray background */
+  background-color: #0e49ee;   /* light gray background */
   border-radius: 20px;
   padding: 6px 12px;
   font-size: 0.9rem;
@@ -463,9 +463,16 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 #services .icon-circle {
-  font-size: 1.4rem;
-  background: var(--bg-soft);
-  color: var(--brand);
+  width: 60px;
+  height: 60px;
+  background: #750108; /* brand maroon */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+
 }
 #services h3.h6 {
   font-family: 'Alegreya', serif;
@@ -475,6 +482,9 @@ html { scroll-behavior: smooth; }
 #services p.small{
   color: rgb(0 0 0 / 96%);
 } 
+div.mt-3.d-flex{
+  color: #fff;
+}
 div.col-lg-8{
   color: #ffffff;
   background-color:#0000007a ;
@@ -695,4 +705,28 @@ div.col-lg-8{
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+}
+
+.btn-brand {
+  background-color: #750108;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.btn-brand:hover {
+  background-color: #a00012;
+  transform: translateY(-2px);
+}
+
+.btn-outline-muted {
+  border: 2px solid #750108;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-muted:hover {
+  background-color: #750108;
+  color: #fff;
+  transform: translateY(-2px);
 }
