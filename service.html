@@ -10,39 +10,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="asset/css/service.css">
  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Desktop Social Icons (top center) -->
+<div class="d-none d-lg-flex justify-content-center py-2">
+  <div class="social-icons d-flex gap-3">
+    <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/YourPage" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com/company/YourPage" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/YourPage" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top bg-light">
   <div class="container">
+    <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center gap-2 flex-wrap" href="index.html">
       <img src="asset/images/logo.png" alt="JTS Logo" width="40" height="40" class="rounded-circle" />
       <span class="brand-badge px-3 py-2 rounded-3 fw-bold">JTS Inspection Services</span>
     </a>
 
-    <div class="d-flex align-items-center gap-2 ms-auto">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
+    <!-- Toggle -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <!-- Nav Links + Mobile Social Icons -->
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html"><strong>Home</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="industries.html"><strong>Industries</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="compliance.html"><strong>Compliance</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="vacancy.html"><strong>Vacancies</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
+        <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <!-- Services Active -->
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="service.html"><strong>Services</strong></a></li>
       </ul>
-        <!-- Social Media Icons -->
-  <div class="social-icons">
-    <a href="https://facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://linkedin.com/company/YourPage" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
+
+      <!-- Mobile Social Icons -->
+      <div class="d-lg-none mt-3">
+        <div class="social-icons d-flex justify-content-center gap-3">
+          <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/YourPage" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/company/YourPage" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/YourPage" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
+
 
 <header class="page-header text-center">
   <h1 class="gradient-heading">Our Services</h1>

@@ -25,57 +25,58 @@
 <body>
 
   <!-- Nav -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 flex-wrap" href="#">
-  <img src="asset/images/logo.png" alt="JTS Logo" class="rounded-circle" />
-  <span class="brand-badge px-3 py-2 rounded-3 fw-bold" style="color:#750108;">
-            JTS Inspection Services</span>
-</a>
-
-      <div class="d-flex align-items-center gap-2 ms-auto">
-        <button class="btn btn-sm btn-outline-muted theme-toggle" aria-label="Toggle dark mode">
-          <i class="fa-regular fa-moon"></i><span class="ms-2">Dark</span>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span>Menu</button>
-      </div>
-<div class="collapse navbar-collapse" id="navMain">
-  <ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" href="service.html"><strong>Services</strong></a></li>
-    <li class="nav-item"><a class="nav-link" href="#coverage"><strong>Team</strong></a></li>
-    <li class="nav-item"><a class="nav-link" href="compliance.html"><strong>Compliance</strong></a></li>
-    <li class="nav-item"><a class="nav-link" href="industries.html"><strong>Industries</strong></a></li>
-    <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
-    <li class="nav-item"><a class="nav-link" href="about.html"><strong>About</strong></a></li>
-  </ul>
-
-  <!-- Social Media Icons -->
-  <ul class="navbar-nav social-icons">
-    <li class="nav-item">
-      <a class="nav-link" href="https://facebook.com/YourPage" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://twitter.com/YourPage" target="_blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://linkedin.com/company/YourPage" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://instagram.com/YourPage" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  </ul>
+ <!-- Desktop Social Icons (top center) -->
+<div class="d-none d-lg-flex justify-content-center py-2">
+  <div class="social-icons d-flex gap-3">
+    <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/YourPage" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com/company/YourPage" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/YourPage" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
 </div>
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2 flex-wrap" href="index.html">
+      <img src="asset/images/logo.png" alt="JTS Logo" width="40" height="40" class="rounded-circle" />
+      <span class="brand-badge px-3 py-2 rounded-3 fw-bold" style="color:#750108;">
+        JTS Inspection Services
+      </span>
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" 
+      aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links + Mobile Social Icons -->
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto">
+        <!-- Home Active -->
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html"><strong>Home</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
+        <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+
+      <!-- Mobile Social Icons -->
+      <div class="d-lg-none mt-3">
+        <div class="social-icons d-flex justify-content-center gap-3">
+          <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/YourPage" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/company/YourPage" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/YourPage" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Hero -->
 <header class="hero section">
@@ -370,67 +371,130 @@
   
     </div>
   </section>
-
-<section id="industries" class="section">
+<section id="industries-carousel" class="section py-5 bg-light">
   <div class="container">
-    <h2 class="section-title">Industries We Support</h2>
-    <p class="section-sub">
-      We’re dedicated to supporting industries across Papua New Guinea with precision, reliability and professionalism.
-    </p>
+    <h2 class="section-title text-center mb-4">Industries We Support</h2>
 
-    <div class="row gy-4">
-      <!-- Oil & Gas -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 text-center p-3">
-          <img src="asset/images/industries/oil.jpg" class="img-fluid rounded mb-3" alt="Oil & Gas">
-          <h5>Oil & Gas</h5>
-          <p class="small">Inspection and integrity services for pipelines, tanks, and offshore structures.</p>
-          <a href="industries.html#oilgas" class="btn btn-sm btn-outline-dark px-3">Read More</a>
+    <!-- Tab Buttons -->
+    <div class="carousel-tabs d-flex justify-content-center gap-3 mb-4">
+      <button class="tab-btn active" data-target="oil">Oil & Gas</button>
+      <button class="tab-btn" data-target="marine">Marine</button>
+      <button class="tab-btn" data-target="mining">Mining</button>
+      <button class="tab-btn" data-target="power">Power</button>
+      <button class="tab-btn" data-target="manufacturing">Manufacturing</button>
+    </div>
+
+    <!-- Carousel Content -->
+    <div class="carousel-slides row align-items-center">
+      <!-- Image on Left -->
+      <div class="col-md-6">
+        <div class="slide active" id="oil">
+          <img src="asset/images/industries/oil.jpg" alt="Oil & Gas" class="img-fluid rounded shadow">
+        </div>
+        <div class="slide" id="marine">
+          <img src="asset/images/industries/marine.jpeg" alt="Marine" class="img-fluid rounded shadow">
+        </div>
+        <div class="slide" id="mining">
+          <img src="asset/images/industries/mining.png" alt="Mining" class="img-fluid rounded shadow">
+        </div>
+        <div class="slide" id="power">
+          <img src="asset/images/industries/power.jpeg" alt="Power & Utilities" class="img-fluid rounded shadow">
+        </div>
+        <div class="slide" id="manufacturing">
+          <img src="asset/images/industries/manufacturing.jpg" alt="Manufacturing" class="img-fluid rounded shadow">
         </div>
       </div>
 
-      <!-- Marine -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 text-center p-3">
-          <img src="asset/images/industries/marine.jpeg" class="img-fluid rounded mb-3" alt="Marine">
-          <h5>Marine</h5>
-          <p class="small">Hull inspections, corrosion monitoring, and NDT for vessels and ports.</p>
-          <a href="industries.html#marine" class="btn btn-sm btn-outline-dark px-3">Read More</a>
+      <!-- Description on Right -->
+      <div class="col-md-6">
+        <div class="slide-desc active" data-for="oil">
+          <h4>Oil & Gas</h4>
+          <p>Inspection and integrity services for pipelines, tanks, and offshore structures.</p>
+          <a href="industries.html#oilgas" class="btn btn-sm btn-outline-dark">Read More</a>
         </div>
-      </div>
-
-      <!-- Mining -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 text-center p-3">
-          <img src="asset/images/industries/mining.png" class="img-fluid rounded mb-3" alt="Mining">
-          <h5>Mining</h5>
-          <p class="small">Structural testing, weld inspections, and safety assurance for mining operations.</p>
-          <a href="industries.html#mining" class="btn btn-sm btn-outline-dark px-3">Read More</a>
+        <div class="slide-desc" data-for="marine">
+          <h4>Marine</h4>
+          <p>Hull inspections, corrosion monitoring, and NDT for vessels and ports.</p>
+          <a href="industries.html#marine" class="btn btn-sm btn-outline-dark">Read More</a>
         </div>
-      </div>
-
-      <!-- Power & Utilities -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 text-center p-3">
-          <img src="asset/images/industries/power.jpeg" class="img-fluid rounded mb-3" alt="Power & Utilities">
-          <h5>Power & Utilities</h5>
-          <p class="small">Inspection of transmission lines, substations, and energy infrastructure.</p>
-          <a href="industries.html#power" class="btn btn-sm btn-outline-dark px-3">Read More</a>
+        <div class="slide-desc" data-for="mining">
+          <h4>Mining</h4>
+          <p>Structural testing, weld inspections, and safety assurance for mining operations.</p>
+          <a href="industries.html#mining" class="btn btn-sm btn-outline-dark">Read More</a>
         </div>
-      </div>
-
-      <!-- Manufacturing -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100 text-center p-3">
-          <img src="asset/images/industries/manufacturing.jpg" class="img-fluid rounded mb-3" alt="Manufacturing">
-          <h5>Manufacturing</h5>
-          <p class="small">Quality assurance, weld testing, and structural inspections for production facilities.</p>
-          <a href="industries.html#manufacturing" class="btn btn-sm btn-outline-dark px-3">Read More</a>
+        <div class="slide-desc" data-for="power">
+          <h4>Power & Utilities</h4>
+          <p>Inspection of transmission lines, substations, and energy infrastructure.</p>
+          <a href="industries.html#power" class="btn btn-sm btn-outline-dark">Read More</a>
+        </div>
+        <div class="slide-desc" data-for="manufacturing">
+          <h4>Manufacturing</h4>
+          <p>Quality assurance, weld testing, and structural inspections for production facilities.</p>
+          <a href="industries.html#manufacturing" class="btn btn-sm btn-outline-dark">Read More</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+ <!-- Why Choose Us -->
+<section class="why-choose-us py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="gradient-heading">Why Choose Us</h2>
+      <p class="section-sub">
+        At JTS Inspection Services, we deliver trusted solutions backed by expertise, innovation, and customer care.
+      </p>
+    </div>
+
+    <div class="row gy-4">
+      <!-- Experience and Expertise -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-card h-100 text-center p-4">
+          <div class="icon-circle mx-auto mb-3"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Experience & Expertise</h3>
+          <p>With years of experience, our team handles complex inspection projects with confidence and skill.</p>
+        </div>
+      </div>
+
+      <!-- Cutting-Edge Technology -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-card h-100 text-center p-4">
+          <div class="icon-circle mx-auto mb-3"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Cutting-Edge Technology</h3>
+          <p>We invest in the latest NDT equipment and techniques, ensuring precise and efficient inspections.</p>
+        </div>
+      </div>
+
+      <!-- Customized Solutions -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-card h-100 text-center p-4">
+          <div class="icon-circle mx-auto mb-3"><i class="fa-solid fa-sliders"></i></div>
+          <h3>Customized Solutions</h3>
+          <p>Every project is unique. We tailor inspection plans to meet your specific requirements.</p>
+        </div>
+      </div>
+
+      <!-- Timely Delivery -->
+      <div class="col-md-6 col-lg-6">
+        <div class="choose-card h-100 text-center p-4">
+          <div class="icon-circle mx-auto mb-3"><i class="fa-solid fa-clock"></i></div>
+          <h3>Timely Delivery</h3>
+          <p>We prioritize delivering results within agreed timelines, minimizing disruption to your operations.</p>
+        </div>
+      </div>
+
+      <!-- Exceptional Customer Service -->
+      <div class="col-md-6 col-lg-6">
+        <div class="choose-card h-100 text-center p-4">
+          <div class="icon-circle mx-auto mb-3"><i class="fa-solid fa-headset"></i></div>
+          <h3>Exceptional Customer Service</h3>
+          <p>Our team is responsive, communicative, and dedicated to providing excellent customer support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
  
   <!-- Contact -->
   <section id="contact" class="section">
@@ -523,7 +587,7 @@
         <h6 class="fw-bold mb-2">Quick Links</h6>
         <div class="d-flex gap-3 flex-wrap mb-3">
           <a class="link-muted" href="service.html">Services</a>
-          <a class="link-muted" href="#coverage">Coverage</a>
+          <a class="link-muted" href="team.html">Team</a>
           <a class="link-muted" href="compliance.html">Compliance</a>
           <a class="link-muted" href="vacancy.html">Careers</a>
         </div>

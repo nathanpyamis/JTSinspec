@@ -11,7 +11,7 @@ body {
 }
 
 a.nav-link {
-  color: rgba(255, 255, 255, 0.94);
+  color: #750008;
   transition: color 0.3s ease;
 }
 a.nav-link:hover {
@@ -143,7 +143,7 @@ a.nav-link:hover {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 1.8rem;
-  color: #fee600;
+  color: #fff;
   text-align: center;
 }
 
@@ -176,7 +176,7 @@ main.container {
   background: linear-gradient(to left, #d0d0cf, #750108);
 }
 div.container {
-  background: linear-gradient(to left, #ffffff, #750108bd);
+  background: linear-gradient(to left, #ffffff, #6e6263bd);
 }
 div.container span.brand-badge {
   color: #020202;
@@ -189,22 +189,49 @@ p {
 
 /* Social icons */
 .social-icons {
-  display: flex !important;       /* force row layout */
-  flex-direction: row !important; /* override any column inheritance */
-  justify-content: center;        /* center horizontally */
-  align-items: center;            /* vertical centering */
-  gap: 5px;                      /* slightly tighter spacing */
-  margin-top: 8px;                /* reduced top margin */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;          /* slightly wider for clarity */
+  margin-top: 8px;
+  padding-left: 10px;
 }
 
+/* Base icon style */
 .social-icons a {
-  color: #750008;                 /* brand maroon */
-  font-size: 1.1rem;              /* smaller icon size */
-  transition: color 0.3s ease;
+  color: #750008;         /* brand maroon */
+  font-size: 1.2rem;      /* consistent size */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
+/* Hover */
 .social-icons a:hover {
-  color: #0d6efd;
+  color: #0d6efd;         /* blue hover effect */
+  transform: scale(1.08);
 }
+
+/* Scroll-in animation state: start hidden only if you have the JS enabled */
+.social-icons.animate a {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.social-icons.animate a.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desktop-only positioning if needed */
+@media (min-width: 992px) {
+  #desktop-social .social-icons {
+    justify-content: center; /* center on desktop block */
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
 
 /* Navbar toggler */
 button.navbar-toggler {

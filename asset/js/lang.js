@@ -1,34 +1,41 @@
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Theme toggle
-    const themeBtn = document.querySelector('.theme-toggle');
-    themeBtn.addEventListener('click', () => {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      themeBtn.querySelector('i').className = isDark ? 'fa-regular fa-moon' : 'fa-regular fa-sun';
-      themeBtn.querySelector('span').textContent = isDark ? 'Dark' : 'Light';
-      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Tab button active state
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const target = btn.getAttribute('data-target');
+
+      // Image slides
+      document.querySelectorAll('.slide').forEach(slide => {
+        slide.classList.remove('active');
+        if (slide.id === target) slide.classList.add('active');
+      });
+
+      // Descriptions
+      document.querySelectorAll('.slide-desc').forEach(desc => {
+        desc.classList.remove('active');
+        if (desc.getAttribute('data-for') === target) desc.classList.add('active');
+      });
     });
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-      themeBtn.querySelector('i').className = savedTheme === 'dark' ? 'fa-regular fa-sun' : 'fa-regular fa-moon';
-      themeBtn.querySelector('span').textContent = savedTheme === 'dark' ? 'Light' : 'Dark';
+  });
+  document.querySelectorAll('.social-icons.animate a').forEach((el) => {
+    // Guard: if reduced-motion is preferred, skip animation
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      el.classList.add('visible');
+      return;
     }
 
-    // Language toggle (English / Tok Pisin)
-    const langBtn = document.querySelector('.lang-toggle');
-    const setLang = (lang) => {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = lang === 'tp' ? (el.getAttribute('data-tp') || el.getAttribute('data-en')) : el.getAttribute('data-en');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-      langBtn.querySelector('span').textContent = lang === 'tp' ? 'TP' : 'EN';
-      localStorage.setItem('lang', lang);
-    };
-    langBtn.addEventListener('click', () => {
-      const current = localStorage.getItem('lang') || 'en';
-      setLang(current === 'en' ? 'tp' : 'en');
-    });
-    setLang(localStorage.getItem('lang') || 'en');
+    }, { threshold: 0.2 });
+
+    observer.observe(el);
+  });

@@ -70,6 +70,42 @@
       background-color: #2c2c2c;
       border-color: #444;
     }
+    .navbar.navbar-expand-lg{
+      background-color: #fff;
+    }
+    #navMain a{
+    color: #750008;
+    }
+.navbar-nav .nav-link {
+  color: #fff;              /* default link color */
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #0d6efd; /* blue background */
+  color: #fee600;            /* compliance yellow text */
+  border-radius: 4px;
+}
+.social-icons {
+  display: flex !important;       /* force row layout */
+  flex-direction: row !important; /* override any column inheritance */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* vertical centering */
+  gap: 5px;                      /* slightly tighter spacing */
+  margin-top: 8px;                /* reduced top margin */
+  padding-left: 10px;
+}
+
+.social-icons a {
+  color: #750008;                 /* brand maroon */
+  font-size: 1.1rem;              /* smaller icon size */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;                 /* blue hover effect */
+}
   </style>
 </head>
 <body>
@@ -81,9 +117,6 @@
     </a>
 
     <div class="d-flex align-items-center gap-2 ms-auto">
-      <button class="btn btn-sm btn-outline-muted theme-toggle" aria-label="Toggle dark mode">
-        <i class="bi bi-moon"></i><span class="ms-2">Dark</span>
-      </button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -91,11 +124,17 @@
 
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html"><strong>Home</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="industries.html"><strong>Industries</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="vacancy.html"><strong>Vacancies</strong></a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact"><strong>Contact</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
+        <li class="nav-item"><a class="nav-link" href="vacancy.html">Vacancies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
+       <div class="social-icons">
+    <a href="https://facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com/company/YourPage" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
     </div>
   </div>
 </nav>

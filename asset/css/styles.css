@@ -1,79 +1,3 @@
- :root {
-      --brand: #0f6fff;
-      --brand-ink: #0a2a66;
-      --ink: #0f172a;
-      --muted: #556079;
-      --bg: #ffffff;
-      --bg-soft: #fee600;
-      --card: #ffffff;
-      --border: #e5e7eb;
-      --accent: #11b980;
-    }
-[data-theme="dark"] {
-  --ink: #ffffff;       /* main text white */
-  --muted: #ffa500;     /* secondary text orange */
-  --bg: #0b1220;
-  --bg-soft: #0e1626;
-  --card: #101a2f;
-  --border: #1f2b44;
-  --brand-ink: #ffa500; /* brand accent orange */
-}
-
-/* Force div and span text colors in dark mode */
-[data-theme="dark"] div,
-[data-theme="dark"] span {
-  color: var(--ink); /* default white */
-}
-
-/* If you want spans to be orange highlights */
-[data-theme="dark"] span.highlight,
-[data-theme="dark"] .section-sub span {
-  color: var(--muted); /* orange accent */
-}
-[data-theme="dark"] span.small.text,
-[data-theme="dark"] div.small.text-muted,
-[data-theme="dark"] span.d-none,
-[data-theme="dark"] a.nav-link
-              {
-
-  color: #add8e6 !important; /* light blue */
-}
-[data-theme="dark"] div.small.text-muted.custom-dark{
-
-  color:#750008 !important;
-}
-[data-theme="dark"] ul.list-check.list-unstyled,
-[data-theme="dark"] p.small
-{
-  color: #000000d9 !important;
-}
-[data-theme="dark"] p.section-sub,
-[data-theme="dark"] .text-muted,
-[data-theme="dark"] p.text.small.text-muted,
-[data-theme="dark"] h6.fw-bold{
-  color: #ffc107 !important; /* Light orange */
-}
-/* Example: put this near the end of your stylesheet */
-[data-theme="dark"] .navbar-toggler {
-  border-color: #fff;
-}
-
-[data-theme="dark"] .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-}
-[data-theme="dark"] h3.h6.m-0 {
-  color: #2f5a9e !important; /* Dark blue */
-}
-[data-theme="dark"] span.chip {
-  color: #000 !important; /* Black */
-}
-[data-theme="dark"] div.small-contact,
-[data-theme="dark"] i.fa-solid,
-[data-theme="dark"] h2.section-title.custom {
-  color: #0a58ca; /* Dark blue */
-}
-
-
 
 /* Base styles */
 body {
@@ -156,23 +80,49 @@ h2.section-title{
   color: #fff;
 }
 .social-icons {
-  display: flex !important;       /* force row layout */
-  flex-direction: row !important; /* override any column inheritance */
-  justify-content: center;        /* center horizontally */
-  align-items: center;            /* vertical centering */
-  gap: 5px;                      /* slightly tighter spacing */
-  margin-top: 8px;                /* reduced top margin */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;          /* slightly wider for clarity */
+  margin-top: 8px;
+  padding-left: 10px;
 }
 
+/* Base icon style */
 .social-icons a {
-  color: #750008;                 /* brand maroon */
-  font-size: 1.1rem;              /* smaller icon size */
-  transition: color 0.3s ease;
+  color: #750008;         /* brand maroon */
+  font-size: 1.2rem;      /* consistent size */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover */
 .social-icons a:hover {
-  color: #0d6efd;                 /* blue hover effect */
+  color: #0d6efd;         /* blue hover effect */
+  transform: scale(1.08);
 }
+
+/* Scroll-in animation state: start hidden only if you have the JS enabled */
+.social-icons.animate a {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.social-icons.animate a.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desktop-only positioning if needed */
+@media (min-width: 992px) {
+  #desktop-social .social-icons {
+    justify-content: center; /* center on desktop block */
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
 
 .navbar-nav .nav-link:hover {
   background-color: #0d6efd;  /* blue background on hover */
@@ -471,6 +421,7 @@ html { scroll-behavior: smooth; }
   position: relative;
   background: url("../images/compliance-bg.webp") center center / cover no-repeat;
   color: #fff;
+  background-attachment: fixed; /* keeps image steady */
 }
 #compliance::before {
   content: "";
@@ -577,4 +528,171 @@ div.col-lg-8{
 #industries h5 {
   font-weight: 600;
   color: #750008;
+}
+/* Image carousal */
+
+.carousel-industry-wrapper {
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.industry-carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.industry-card {
+  scroll-snap-align: start;
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+}
+
+.industry-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.industry-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.industry-info h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.industry-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #750008;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.tab-btn:hover,
+.tab-btn.active {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.carousel-slides .slide {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.carousel-slides .slide.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tab-btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #750008;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.tab-btn:hover,
+.tab-btn.active {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.slide, .slide-desc {
+  display: none;
+}
+.slide.active, .slide-desc.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slide-desc {
+  padding: 1rem;              /* inner spacing */
+  margin-bottom: 1.5rem;      /* space below each block */
+  text-align: left;           /* align text for readability */
+  background-color: #f9f9f9;  /* subtle background for contrast */
+  border-radius: 8px;         /* soften edges */
+}
+
+/* Paragraph styling */
+.slide-desc p {
+  font-size: 0.95rem;         /* slightly smaller text */
+  line-height: 1.5;           /* improve readability */
+  margin-bottom: 1rem;        /* space before button */
+  color: #333;                /* darker text for clarity */
+}
+
+/* Heading styling */
+.slide-desc h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #750008;             /* brand maroon */
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 576px) {
+  .slide-desc {
+    padding: 0.75rem;         /* tighter padding on mobile */
+    margin-bottom: 1rem;
+    text-align: center;       /* center text on small screens */
+  }
+  .slide-desc p {
+    font-size: 0.9rem;        /* slightly smaller for mobile */
+    line-height: 1.4;
+  }
+  .slide-desc h4 {
+    font-size: 1rem;          /* reduce heading size */
+  }
+}
+
+.why-choose-us {
+  background: #f8f9fa;
+}
+
+.choose-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.choose-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #750108; /* brand maroon */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }

@@ -2,16 +2,13 @@
     body {
 background: linear-gradient(to left,#ffffff , #750108);
     }
-   div.container{
-    background: linear-gradient(to left,#ffffff , #750108);
-   }
 
     /* Gradient heading */
    .brand-badge{
-    color: #fee600;
+    color: #000000;
    }
 .navbar-nav .nav-link {
-  color: white;              /* default text color */
+  color: #750008;              /* default text color */
   padding: 8px 15px;         /* spacing for clickable area */
   transition: all 0.3s ease; /* smooth hover effect */
 }
@@ -22,32 +19,50 @@ background: linear-gradient(to left,#ffffff , #750108);
   border-radius: 4px;        /* optional: rounded corners */
 }
 .social-icons {
-  display: flex !important;       /* force row layout */
-  flex-direction: row !important; /* override any column inheritance */
-  justify-content: center;        /* center horizontally */
-  align-items: center;            /* vertical centering */
-  gap: 5px;                      /* slightly tighter spacing */
-  margin-top: 8px;                /* reduced top margin */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;          /* slightly wider for clarity */
+  margin-top: 8px;
+  padding-left: 10px;
 }
 
+/* Base icon style */
 .social-icons a {
-  color: #750008;                 /* brand maroon */
-  font-size: 1.1rem;              /* smaller icon size */
-  transition: color 0.3s ease;
+  color: #750008;         /* brand maroon */
+  font-size: 1.2rem;      /* consistent size */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover */
 .social-icons a:hover {
-  color: #0d6efd;                 /* blue hover effect */
+  color: #0d6efd;         /* blue hover effect */
+  transform: scale(1.08);
 }
 
+/* Scroll-in animation state: start hidden only if you have the JS enabled */
+.social-icons.animate a {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-    body.dark-mode .gradient-heading,
-    body.dark-mode .section-title {
-      background: linear-gradient(90deg, #ffffff, #ffffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.social-icons.animate a.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* Desktop-only positioning if needed */
+@media (min-width: 992px) {
+  #desktop-social .social-icons {
+    justify-content: center; /* center on desktop block */
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
+    
     /* Buttons */
     .btn-accent {
       background: #0d6efd;
@@ -89,29 +104,55 @@ background: linear-gradient(to left,#ffffff , #750108);
       font-size: 1.2rem;
       flex-shrink: 0;
     }
-    body.dark-mode .icon-circle { background: #6610f2; }
-
-    .list-check li { margin-bottom: 0.5rem; }
-    .list-check i { color: #0d6efd; margin-right: 0.5rem; }
-    body.dark-mode .list-check i { color: #ffffff; }
 
     /* Header spacing */
-    .page-header {
-
+.page-header {
+  position: relative; /* important for overlay */
   background-image: url('../images/NDT2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* steady background */
-  height: 400px;                /* adjust height */
+  background-attachment: fixed;
+  height: 400px;
   display: flex;
+  flex-direction: column; /* stack heading + paragraph */
   align-items: center;
   justify-content: center;
   color: #fff;
+  text-align: center;
+  overflow: hidden; /* ensures overlay stays contained */
 }
 
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1; /* sits behind text */
+}
+
+.page-header h1,
+.page-header p {
+  position: relative; /* ensures text is above overlay */
+  z-index: 2;
+
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+   font-family: 'Fredericka the Great', cursive;
+}
+
+.page-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
   h2.section-title{
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Fredericka the Great', cursive;
   font-weight: 700; /* Medium */
   color: #fee600;
   background-color: #750008;
